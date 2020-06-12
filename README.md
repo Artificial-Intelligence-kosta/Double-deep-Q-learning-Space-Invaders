@@ -25,5 +25,6 @@ where *gamma* is discount factor and Q' is the target network.
 When the batch is randomly sampled from the replay buffer (this breaks the correlations between the samples) the loss is calculated as the **mean squared error**, where error is clipped to **[-1,1]**. Clipping is done to avoid exploding gradients for the large errors. This is called **Huber loss**, because clipping the error is equivalent to using mean absolute error for errors larger than 1 and smaller than -1.<br />
 ![huber loss](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/huber%20loss.png)
 ## SCORE 
+Each point is the average score achieved on the every 100th episode after the agent is run for 30 episodes with Epsilon-Greedy policy, with epsilon = 0.05 <br /> 
 ![reward](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/rewardAveraged.png)
 
