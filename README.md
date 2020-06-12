@@ -10,3 +10,6 @@ Google Colab randomly terminates session if you are using GPU, because it is not
 
 ## PREPROCESSING 
 As I have already mentioned frames are binarized and resized to (84,84). In order to capture the speed of the laser beams and the speed of aliens 4 consecutive frames are stacked up to form a state. Throwing the first frame and adding the new frame new state is formed. Random frame skipping is already implemented in the *SpaceInvaders-v0* environment.
+## NETWORK ARCHITECTURE 
+Same network is used as in original [paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) 
+
