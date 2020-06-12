@@ -1,5 +1,5 @@
 # Double-deep-Q-learning-Space-Invaders
-Agent after 5000 episodes<br />
+Agent after 6400 episodes<br />
 ![Alt text](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/game.gif)
 
 Agent is trained on **Google Colaboratory**. Serveral problems have arosed using this platform:
@@ -24,3 +24,6 @@ where *gamma* is discount factor and Q' is the target network.
 ## LOSS
 When the batch is randomly sampled from the replay buffer (this breaks the correlations between the samples) the loss is calculated as the **mean squared error**, where error is clipped to **[-1,1]**. Clipping is done to avoid exploding gradients for the large errors. This is called **Huber loss**, because clipping the error is equivalent to using mean absolute error for errors larger than 1 and smaller than -1.<br />
 ![huber loss](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/huber%20loss.png)
+## SCORE 
+![reward](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/rewardAveraged.png)
+
