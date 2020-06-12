@@ -1,4 +1,5 @@
 # Double-deep-Q-learning-Space-Invaders
+![Alt text](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/game.gif)
 
 Agent is trained on **Google Colaboratory**. Serveral problems have arosed using this platform:
 
