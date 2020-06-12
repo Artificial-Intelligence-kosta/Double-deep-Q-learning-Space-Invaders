@@ -11,5 +11,8 @@ Google Colab randomly terminates session if you are using GPU, because it is not
 ## PREPROCESSING 
 As I have already mentioned frames are binarized and resized to (84,84). In order to capture the speed of the laser beams and the speed of aliens 4 consecutive frames are stacked up to form a state. Throwing the first frame and adding the new frame new state is formed. Random frame skipping is already implemented in the *SpaceInvaders-v0* environment.
 ## NETWORK ARCHITECTURE 
-Same network is used as in original [paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) 
+Target network and online network are identical. Same architecture is used as in original [paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) 
 ![network](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/network%20architecture.png)
+
+## ACTION SELECTION AND TARGET ESTIMATION
+Action is selected using Epsilon-Greedy policy. With *epsilon* probability the action is selected randomly, otherwise action is selected as *a = argmax(Q(s,a'))* where Q is the online network. To avoid non-stationary targets (target for the same input changes over time, because agent starts to know things better) and to remove maximization bias (which appears as a consequence of always taking the best action, the network becomes biased towards better actions at the time) the target network is used to for estimation of the targets: *target = reward + gamma*max(Q'(s_next,a))*, where *gamma* is discount factor and Q' is the target network.   
