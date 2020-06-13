@@ -22,7 +22,7 @@ Action is selected using **Epsilon-Greedy policy**. With *epsilon* probability t
 ***target = reward***, otherwise<br />
 where *gamma* is discount factor and Q' is the target network.
 ## LOSS
-When the batch is randomly sampled from the replay buffer (this breaks the correlations between the samples) the loss is calculated as the **mean squared error**, where error is clipped to **[-1,1]**. Clipping is done to avoid exploding gradients for the large errors. This is called **Huber loss**, because clipping the error is equivalent to using mean absolute error for errors larger than 1 and smaller than -1.<br />
+When the batch is randomly sampled from the replay buffer (this breaks the correlations between the samples) the loss is calculated as the **mean squared error**, where error is clipped to **[-1,1]**. Clipping is done to avoid exploding gradients for the large errors. This is called **Huber loss**, because clipping the error is equivalent to using mean absolute error for errors larger than 1 and smaller than -1. Online network is updated every 4 frames, and target network is updated every 10000 weight updated (W' = W, where W' are the weights of the target network and W are the weights of the online network.<br />
 ![huber loss](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/huber%20loss.png)
 ## SCORE
 Every 100th episode agent is run for 30 episodes with Epsilon-Greedy policy (epsilon = 0.05). Each point in the plot represents the average score on those 30 episodes.<br /> 
