@@ -1,4 +1,4 @@
-# Double-deep-Q-learning-Space-Invaders
+# Double-deep-Q-learning-Space-Invaders :space_invader:
 Agent after 6400 episodes<br />
 ![Alt text](https://github.com/Artificial-Intelligence-kosta/Double-deep-Q-learning-Space-Invaders/blob/master/garbage/game.gif)
 
